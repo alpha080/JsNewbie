@@ -1,13 +1,13 @@
-## 你的编程语言做得到吗
-## 2006-08-01
-## 软件随想录 More Joel on Software
+//// 你的编程语言做得到吗
+//// 2006-08-01
+//// 软件随想录 More Joel on Software
 
-## 1 begin 用函数取代重复代码 
+//// 1 begin 用函数取代重复代码 
 
 alert("I'd likesome Spaghetti!");
 alert("I'd likesome Chocolate Mousse!");
 
-# creat a function to reuse the last two statement
+// creat a function to reuse the last two statement
 
 function SwedishChef(food)
 {
@@ -17,9 +17,9 @@ function SwedishChef(food)
 SwedishChef("Spaghetti");
 SwedishChef("Chocolate Mousse");
 
-## 1 end
+//// 1 end
 
-## 2 begin 下面两块代码看起来几乎相同
+//// 2 begin 下面两块代码看起来几乎相同
 
 alert("get the lobster");
 PutInPot("lobster");
@@ -29,8 +29,8 @@ alert("get the chicken");
 BoomBoom("chicken");
 BoomBoom("coconut");
 
-# function as a argument of another function
-# 将函数作为一个参数传人另一个函数中
+// function as a argument of another function
+// 将函数作为一个参数传人另一个函数中
 
 function Cook(i1, i2, f)
 {
@@ -42,7 +42,7 @@ function Cook(i1, i2, f)
 Cook("lobster", "water", PutInPot);
 Cook("chicken", "coconut", BoomBoom);
 
-# anonymous function 函数定义直接作为参数
+// anonymous function 函数定义直接作为参数
 
 Cook("chicker",
      "water",
@@ -51,9 +51,9 @@ Cook("chicken",
      "coconut",
      function(x){alert("boom " +x)});
 
-## 2 end
+//// 2 end
 
-## 3 begin 遍历数组元素
+//// 3 begin 遍历数组元素
 
 var a = [1, 2, 3];
 
@@ -68,7 +68,7 @@ for (i = 0; i < a.length; i++)
 }
 
 
-# 
+// 
 
 function map(fn, a)
 {
@@ -81,7 +81,7 @@ function map(fn, a)
 map(function(x){return x*2;}, a);
 map(alert, a);
 
-# 将数组的所有值以某种方式进行累加 
+// 将数组的所有值以某种方式进行累加 
 
 function sum(a)
 {
@@ -102,7 +102,7 @@ function join(a)
 alert(sum([1, 2, 3]));
 alert(jion(["a", "b", "c"]));
 
-# 
+// 
 
 function reduce(fn, a, init)
 {
@@ -122,4 +122,4 @@ function join(a)
 	    return reduce(function(a, b){return a + b;}, a, "");
 }
 
-## 3 end
+//// 3 end
